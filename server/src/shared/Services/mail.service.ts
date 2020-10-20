@@ -26,7 +26,7 @@ export class MailService {
 
             await ejs.renderFile(`${__dirname}/../../../public/MailTemplates/verification.ejs`, {
                 verificationAddress: bodyData.text,
-                fullName: bodyData.recieverFullname
+                fullName: bodyData.receiverFullname
             }, async (err: any, data: any) => {
                 if (err) reject(err)
                 else {
@@ -60,7 +60,7 @@ export class MailService {
 
             await ejs.renderFile(`${__dirname}/../../../public/MailTemplates/recovery.ejs`, {
                 accountRecoverAddress: bodyData.text,
-                fullName: bodyData.recieverFullname
+                fullName: bodyData.receierFullname
             }, async (err: any, data: any) => {
                 if (err) reject(err)
                 else {
@@ -94,7 +94,7 @@ export class MailService {
 
             await ejs.renderFile(`${__dirname}/../../../public/MailTemplates/mail-update.ejs`, {
                 emailUpdateAddress: bodyData.text,
-                fullName: bodyData.recieverFullname
+                fullName: bodyData.receiverFullname
             }, async (err: any, data: any) => {
                 if (err) reject(err)
                 else {
@@ -128,7 +128,7 @@ export class MailService {
 
             await ejs.renderFile(`${__dirname}/../../../public/MailTemplates/account-activation.ejs`, {
                 accountActivationAddress: bodyData.text,
-                fullName: bodyData.recieverFullname
+                fullName: bodyData.receiverFullname
             }, async (err: any, data: any) => {
                 if (err) reject(err)
                 else {
